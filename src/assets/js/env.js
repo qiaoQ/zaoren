@@ -1,0 +1,27 @@
+/**
+ * 配置编译环境和线上环境之间的切换
+ * 
+ * baseUrl: 域名地址
+ * routerMode: 路由模式
+ * imgBaseUrl: 图片所在域名地址
+ * 
+ */
+
+let baseUrl = ''; 
+let routerMode = 'history';
+let imgBaseUrl = 'https://wxtst.zaorenzp.com';
+
+
+if (process.env.NODE_ENV == 'development') {
+	//baseUrl = 'https://wxtst.zaorenzp.com'
+	baseUrl += '/api';//解决反向代理多个请求的问题
+}else if(process.env.NODE_ENV == 'production'){
+
+	// baseUrl = 'http://cangdu.org:8001';
+}
+
+export {
+	baseUrl,
+	routerMode,
+	imgBaseUrl,
+}
