@@ -20,7 +20,7 @@ export default {
 		}
 	},
 	mounted(){
-		
+
 	},
 	methods:{
 		navChange:function(res){
