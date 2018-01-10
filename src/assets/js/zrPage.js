@@ -35,8 +35,8 @@ zrPage.prototype.nextPage = function(){
 		that.getData(false)
 		//当前页面大于总页数时终止loadMore方法
 		if(that.currentPage > that.totalPage){
-			this.that.isLoading = false;
-			this.that.noResult = false;
+			that.isLoading = false;
+			that.noResult = false;
 			return
 		};
 	})
